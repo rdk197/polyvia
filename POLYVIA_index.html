@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#070510"><meta name="color-scheme" content="dark"><meta name="description" content="POLYVIA — Language Galaxy. Изучай языки через игры, миссии и космические путешествия.">
+<title>POLYVIA — Language Galaxy</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+:root{--bg:#070510;--panel:#100b1d;--panel2:#171027;--line:#ffffff16;--muted:#a99bbd;--text:#f8f4ff;--violet:#a77aff;--pink:#e2a2ff;--cyan:#8ddcff;--green:#7ce6bc;--gold:#ffd88a;--red:#ff8fa8;--shadow:0 24px 80px #0008}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 12% 0%,#32145a55,transparent 36%),radial-gradient(ellipse at 90% 28%,#1b236044,transparent 32%),var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-width:320px;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background-image:radial-gradient(1px 1px at 10% 20%,#fff9 99%,transparent),radial-gradient(1px 1px at 30% 70%,#cbb5ff99 99%,transparent),radial-gradient(2px 2px at 80% 30%,#fff8 99%,transparent),radial-gradient(1px 1px at 65% 85%,#fff8 99%,transparent),radial-gradient(1px 1px at 90% 65%,#c9aaff99 99%,transparent);background-size:280px 250px,340px 300px,420px 380px,300px 320px,500px 450px;animation:starDrift 90s linear infinite}@keyframes starDrift{to{background-position:280px 250px,-340px 300px,420px -380px,-300px 320px,500px -450px}}button,input,select{font:inherit}button{cursor:pointer;color:inherit}.app{max-width:1320px;margin:auto;padding:0 22px 60px}.top{height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px;position:sticky;top:0;z-index:20;background:#090612d9;backdrop-filter:blur(22px);border-bottom:1px solid var(--line);margin:0 -22px;padding:0 22px}.brand{display:flex;align-items:center;gap:11px;font:800 18px Manrope;letter-spacing:2.4px;white-space:nowrap}.brandmark{width:40px;height:40px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#bd8aff,#4b2683 65%,#17102a);box-shadow:0 0 32px #a46aff66;font-size:22px}.brand small{display:block;font:700 8px 'DM Sans';letter-spacing:2.4px;color:#a995c4;margin-top:2px}.nav{display:flex;gap:4px;align-items:center}.nav button,.mobile-nav button{border:1px solid transparent;background:transparent;color:#b9accb;padding:10px 12px;border-radius:11px;font-size:11px;transition:.25s}.nav button:hover,.mobile-nav button:hover{background:#ffffff0c;color:white}.nav button.active,.mobile-nav button.active{background:#a77aff20;border-color:#b98cff42;color:#fff}.topright{display:flex;align-items:center;gap:8px}.chip{border:1px solid var(--line);background:#ffffff08;border-radius:22px;padding:8px 11px;font-size:11px;white-space:nowrap}.avatar{width:37px;height:37px;border-radius:50%;border:1px solid #d4b3ff;background:linear-gradient(145deg,#b68aff,#452174);font-weight:800}.mobile-nav{display:none}.view{display:none;animation:appear .45s ease}.view.active{display:block}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}.hero{min-height:500px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:25px;padding:35px 0 20px}.eyebrow{color:#c2a0ff;font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase}.hero h1{font:800 clamp(42px,6vw,76px)/1.02 Manrope;letter-spacing:-4px;margin:18px 0}.gradient{background:linear-gradient(95deg,#f2e8ff 0%,#bd91ff 42%,#86d8ff 90%);color:transparent;background-clip:text}.hero p,.pagehead p{color:#b9adc9;line-height:1.8;max-width:550px;font-size:14px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.btn{border:1px solid #b99aff55;background:#ffffff09;border-radius:12px;padding:12px 17px;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.25s}.btn:hover{transform:translateY(-2px);border-color:#d2baff;box-shadow:0 9px 30px #a16aff24}.btn.primary{background:linear-gradient(110deg,#9859ec,#5931a3);border-color:#c7a5ff;box-shadow:0 8px 35px #844bd944}.btn.ghost{background:#ffffff06}.btn:disabled{opacity:.35;cursor:not-allowed;transform:none}.universe{height:420px;position:relative;display:grid;place-items:center;isolation:isolate}.nebula{position:absolute;width:390px;height:300px;border-radius:50%;background:radial-gradient(ellipse,#7b35c744,transparent 68%);filter:blur(22px);animation:pulse 6s ease-in-out infinite alternate}.planet{width:235px;height:235px;border-radius:50%;position:relative;background:radial-gradient(circle at 30% 24%,#f1dcff 0%,#b58af0 12%,#7042b2 34%,#28164c 68%,#080511 90%);box-shadow:inset -35px -24px 48px #05030d,0 0 55px #9b64ff88,0 0 145px #7735c966;animation:float 7s ease-in-out infinite}.planet:before{content:"";position:absolute;inset:22px 0;border:11px solid #d4b3ff9c;border-left-color:#c5a1ff15;border-right-color:#f0dfffaa;border-radius:50%;transform:rotate(-23deg);width:330px;left:-52px;top:80px;box-shadow:0 0 24px #bd91ff66}.planet:after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(125deg,transparent 30%,#070510aa 85%)}.orbit{position:absolute;width:400px;height:400px;border:1px solid #b68aff32;border-radius:50%;animation:spin 32s linear infinite}.orbit.o2{width:330px;height:150px;transform:rotate(-28deg);border-color:#8ddcff55;animation:spin2 23s linear infinite}.orbit.o3{width:470px;height:200px;transform:rotate(43deg);border-style:dashed;opacity:.5;animation:spin2 45s linear infinite reverse}.satellite{position:absolute;width:12px;height:12px;border-radius:50%;background:#c9a5ff;box-shadow:0 0 18px 6px #a46aff88;top:12%;right:20%}.spark{position:absolute;color:#eadcff;text-shadow:0 0 18px #b98aff;font-size:24px;animation:twinkle 2.5s infinite alternate}.sp1{left:9%;top:20%}.sp2{right:9%;bottom:23%;animation-delay:1s}.sp3{left:19%;bottom:15%;animation-delay:.5s}.floatcard{position:absolute;right:0;bottom:35px;background:#130d22eF;border:1px solid #c5a4ff55;border-radius:15px;padding:13px 16px;box-shadow:var(--shadow);font-size:11px;animation:float 5s ease-in-out infinite}.floatcard small{display:block;color:var(--muted);margin-top:4px}@keyframes float{50%{transform:translateY(-12px)}}@keyframes pulse{to{opacity:.55;transform:scale(1.14)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes spin2{to{rotate:360deg}}@keyframes twinkle{to{opacity:.25;transform:scale(.7)}}.sectiontitle{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:20px 0 14px}.sectiontitle h2{font:800 22px Manrope;margin:6px 0 0;letter-spacing:-.6px}.grid{display:grid;grid-template-columns:1.5fr .8fr;gap:18px}.card{background:linear-gradient(145deg,#171027ee,#0d0918f2);border:1px solid var(--line);border-radius:19px;padding:20px;box-shadow:0 18px 55px #0003;position:relative;overflow:hidden}.card.glow:before{content:"";position:absolute;width:230px;height:150px;right:-100px;top:-90px;background:#a56bff22;filter:blur(30px);pointer-events:none}.coursehead{display:flex;align-items:center;justify-content:space-between;gap:12px}.coursehead h3{font:800 22px Manrope;margin:7px 0}.coursehead p{font-size:11px;color:var(--muted);margin:0}.levelorb{width:52px;height:52px;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle at 30% 25%,#cbaaff,#6336a4 70%);border:1px solid #d7bcff;box-shadow:0 0 24px #a56cff55;font-weight:800}.progresslabel{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;margin-top:18px}.bar{height:7px;background:#ffffff12;border-radius:9px;overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,#7543cb,#c49aff,#8ddcff);box-shadow:0 0 15px #a77aff77;transition:width .5s}.unit{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #ffffff0c}.unit:last-child{border:0}.uniticon{width:40px;height:40px;display:grid;place-items:center;border-radius:13px;background:#a77aff18;border:1px solid #b58cff40;font-size:17px}.unit b{font-size:12px}.unit small{display:block;color:var(--muted);font-size:10px;margin-top:4px}.unit .xp{margin-left:auto;color:#d0b5ff;font-size:10px;white-space:nowrap}.side{display:grid;gap:13px}.statrow{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin:15px 0 8px}.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:16px;padding-top:14px}.stats div{text-align:center}.stats b{font-size:15px;display:block}.stats small{font-size:9px;color:var(--muted)}.mission h3{font:800 16px Manrope;margin:11px 0 6px}.mission p{font-size:11px;color:var(--muted);line-height:1.6}.langgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.lang{border:1px solid var(--line);background:#ffffff06;border-radius:14px;padding:14px;text-align:left;min-height:100px;transition:.25s}.lang:hover{transform:translateY(-3px);border-color:#a77aff88;background:#a77aff12}.lang.selected{border-color:#c19aff;background:#a77aff20;box-shadow:0 0 25px #a77aff17}.lang span{font-size:24px}.lang b{display:block;font-size:11px;margin-top:8px}.lang small{color:var(--muted);font-size:9px}.pagehead{padding:35px 0 20px}.pagehead h1{font:800 clamp(30px,4vw,44px) Manrope;margin:9px 0;letter-spacing:-1.5px}.pagehead p{font-size:13px}.two{display:grid;grid-template-columns:1fr 1fr;gap:13px}.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}.levelcard{padding:15px;border:1px solid var(--line);background:#ffffff05;border-radius:14px}.levelcard b{font:800 16px Manrope}.levelcard p{font-size:10px;color:var(--muted);line-height:1.5}.badge{font-size:9px;padding:5px 8px;border-radius:20px;background:#a77aff22;color:#d8c2ff}.notice{padding:13px;border:1px solid var(--line);background:#ffffff06;border-radius:12px;color:#b8abc9;font-size:11px;line-height:1.6}.gamegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gamecard{border:1px solid var(--line);border-radius:16px;padding:18px;background:linear-gradient(145deg,#1a112b,#0d0918);text-align:left;min-height:160px;transition:.25s}.gamecard:hover{transform:translateY(-4px);border-color:#b68cff88;box-shadow:0 15px 40px #0005}.gameicon{font-size:30px}.gamecard h3{font:800 15px Manrope;margin:13px 0 6px}.gamecard p{font-size:10px;line-height:1.5;color:var(--muted);margin:0}.lessonwrap{max-width:760px;margin:20px auto}.lessonbox{background:linear-gradient(145deg,#1a112c,#0d0918);border:1px solid #b58aff44;border-radius:22px;padding:24px;box-shadow:var(--shadow)}.lessonmeta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:11px}.lessonbox h2{font:800 27px Manrope;text-align:center;margin:25px 0 7px}.lessonhint{text-align:center;color:var(--muted);font-size:12px;margin-bottom:22px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:10px}.answer{border:1px solid var(--line);background:#ffffff08;border-radius:12px;padding:15px;text-align:left;font-size:13px;transition:.2s}.answer:hover{border-color:#a77aff}.answer.picked{border-color:#c29bff;background:#a77aff22}.answer.correct{border-color:var(--green);background:#7ce6bc14}.answer.wrong{border-color:var(--red);background:#ff8fa814}.feedback{min-height:25px;text-align:center;color:var(--muted);font-size:12px;margin:17px 0}.matchgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.matchcol{display:grid;gap:9px}.matchitem{padding:13px 8px;border:1px solid var(--line);background:#ffffff08;border-radius:11px;text-align:center;font-size:12px;min-height:48px}.matchitem.selected{border-color:#c49cff;background:#a77aff22}.matchitem.done{border-color:var(--green);opacity:.6}.wordtiles{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:20px 0}.tile{border:1px solid #b68cff55;background:#a77aff18;border-radius:10px;padding:12px 14px;font-weight:700}.tile.used{opacity:.2;pointer-events:none}.buildarea{min-height:65px;border:1px dashed #b68cff66;border-radius:12px;padding:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.field{display:grid;gap:7px;margin:12px 0}.field label{font-size:10px;color:#bcaed0}.field input,.field select{width:100%;background:#0b0714;border:1px solid var(--line);color:white;border-radius:10px;padding:12px;outline:none}.field input:focus{border-color:#b68cff}.table{width:100%;border-collapse:collapse;font-size:11px}.table td,.table th{text-align:left;padding:12px 8px;border-bottom:1px solid var(--line)}.table th{color:#a995bf;font-size:9px;letter-spacing:1px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:50;background:#211432;border:1px solid #bd98ff88;padding:12px 17px;border-radius:12px;box-shadow:var(--shadow);font-size:12px;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;bottom:30px}.modal{position:fixed;inset:0;background:#03020be8;backdrop-filter:blur(14px);display:none;place-items:center;z-index:40;padding:18px}.modal.show{display:grid}.modalinner{width:min(520px,100%);background:#171027;border:1px solid #b68cff66;border-radius:20px;padding:24px;box-shadow:var(--shadow)}.close{float:right;border:0;background:none;font-size:24px;color:#c8b6df}.footer{text-align:center;color:#716783;font-size:10px;padding:35px 0 0}.hidden{display:none!important}
+@media(max-width:980px){.nav{display:none}.mobile-nav{display:flex;gap:5px;overflow:auto;padding:9px 0;scrollbar-width:none}.mobile-nav button{white-space:nowrap}.hero{grid-template-columns:1fr .9fr}.universe{transform:scale(.85)}}@media(max-width:700px){.app{padding:0 13px 40px}.top{height:67px;margin:0 -13px;padding:0 13px}.brand{font-size:15px}.brandmark{width:35px;height:35px}.chip{font-size:9px;padding:7px}.hero{grid-template-columns:1fr;gap:0;padding-top:25px}.hero h1{font-size:48px;letter-spacing:-2.5px}.hero p{font-size:12px}.universe{height:300px;transform:scale(.78);margin:-25px 0 -10px}.grid{grid-template-columns:1fr}.langgrid{grid-template-columns:repeat(2,1fr)}.gamegrid{grid-template-columns:1fr 1fr}.levels{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.card{padding:16px}.sectiontitle h2{font-size:19px}.lessonbox{padding:17px}.lessonbox h2{font-size:22px}.answers{grid-template-columns:1fr}.floatcard{right:-10px}.pagehead{padding-top:25px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+
+/* POLYVIA stability & micro-interactions */
+.answer, .matchitem, .tile, .btn { -webkit-tap-highlight-color: transparent; }
+.answer:focus-visible,.matchitem:focus-visible,.tile:focus-visible,.btn:focus-visible {
+  outline:2px solid var(--cyan); outline-offset:3px;
+}
+.answer.correct,.matchitem.done { animation:successPulse .35s ease; }
+.answer.wrong { animation:shake .28s ease; }
+@keyframes successPulse { 50% { transform:scale(1.025); box-shadow:0 0 22px #7ce6bc33; } }
+@keyframes shake { 25% { transform:translateX(-3px); } 75% { transform:translateX(3px); } }
+.toast { max-width:calc(100vw - 28px); text-align:center; }
+
+</style></head>
+<body><div class="app">
+<header class="top"><div class="brand"><div class="brandmark">✦</div><div>POLYVIA<small>LANGUAGE GALAXY</small></div></div><nav class="nav" id="nav"><button class="active" data-view="home">Галактика</button><button data-view="learn">Обучение</button><button data-view="games">Игры</button><button data-view="leaderboard">Лига</button><button data-view="profile">Профиль</button><button data-view="premium">Premium</button></nav><div class="topright"><div class="chip">🔥 <b id="streakTop">0</b></div><div class="chip">✧ <b id="xpTop">0</b> XP</div><button class="avatar" onclick="go('profile')">P</button></div></header>
+<nav class="mobile-nav" id="mobileNav"><button class="active" data-view="home">✦ Главная</button><button data-view="learn">Обучение</button><button data-view="games">Игры</button><button data-view="leaderboard">Лига</button><button data-view="profile">Профиль</button><button data-view="premium">Premium</button></nav>
+<section class="view active" id="view-home"><div class="hero"><div><div class="eyebrow">✧ ТВОЯ ВСЕЛЕННАЯ ЗНАНИЙ</div><h1>Открой язык.<br><span class="gradient">Покори космос.</span></h1><p>Не зубри бесконечные списки. Исследуй новые миры, проходи миссии, разгадывай языковые загадки и прокачивай навыки — шаг за шагом, от первого слова до свободного общения.</p><div class="actions"><button class="btn primary" onclick="startMission()">▶ Начать миссию</button><button class="btn" onclick="go('games')">✧ Игровая галактика</button></div></div><div class="universe"><div class="nebula"></div><div class="orbit"></div><div class="orbit o2"></div><div class="orbit o3"></div><div class="planet"></div><div class="satellite"></div><span class="spark sp1">✦</span><span class="spark sp2">✧</span><span class="spark sp3">✦</span><div class="floatcard">✧ СИГНАЛ ОБНАРУЖЕН<small>Твоя следующая глава ждёт</small></div></div></div>
+<div class="grid"><div><div class="sectiontitle"><div><div class="eyebrow">ТЕКУЩАЯ МИССИЯ</div><h2>Карта твоего путешествия</h2></div><button class="btn" onclick="go('learn')">Все курсы →</button></div><div class="card glow"><div class="coursehead"><div><div class="eyebrow">ВЫБРАННАЯ ГАЛАКТИКА</div><h3 id="homeLang">🇬🇧 Английский</h3><p id="homeNative">English · Уровень A1</p></div><div class="levelorb" id="homeLevel">A1</div></div><div class="progresslabel"><span>Прогресс обучения</span><b id="homeProgress">0%</b></div><div class="bar"><i id="homeBar" style="width:0%"></i></div><div id="homeUnits"></div><button class="btn primary" style="width:100%;margin-top:14px" onclick="startMission()">Продолжить путешествие →</button></div></div><aside class="side"><div class="card"><div class="eyebrow">ТВОЙ КОСМИЧЕСКИЙ ПАСПОРТ</div><h3 style="font:800 17px Manrope;margin:12px 0 3px" id="homeName">Путешественник</h3><small style="color:var(--muted)">Кадет исследовательского флота</small><div class="statrow"><span>Уровень пилота</span><b id="pilotLevel">1</b></div><div class="bar"><i id="pilotBar" style="width:0%"></i></div><div class="stats"><div><b id="statStreak">0 🔥</b><small>серия дней</small></div><div><b id="statLessons">0</b><small>уроков</small></div><div><b id="statBadges">0</b><small>награды</small></div></div></div><div class="card mission"><div class="eyebrow">МИССИЯ ДНЯ</div><h3>Поймай 5 новых слов</h3><p>Каждое выученное слово — ещё одна звезда на твоей карте.</p><button class="btn primary" onclick="startGame('match')">Начать охоту + XP</button></div></aside></div>
+<div class="sectiontitle" style="margin-top:34px"><div><div class="eyebrow">11 ЯЗЫКОВЫХ МИРОВ</div><h2>Выбери свою галактику</h2></div></div><div class="langgrid" id="homeLanguages"></div></section>
+<section class="view" id="view-learn"><div class="pagehead"><div class="eyebrow">АКАДЕМИЯ POLYVIA</div><h1>Твой путь к новому языку</h1><p>Выбирай направление, проходи тематические модули и открывай новые уровни. Прогресс сохраняется на этом устройстве.</p></div><div class="langgrid" id="allLanguages"></div><div class="card" style="margin-top:17px"><div class="coursehead"><div><div class="eyebrow">УЧЕБНЫЙ МАРШРУТ</div><h3 id="learnTitle">Английский</h3><p>Шесть ступеней мастерства</p></div><div class="levelorb" id="learnLevel">A1</div></div><div class="levels" id="levels"></div><div id="learnUnits"></div></div></section>
+<section class="view" id="view-games"><div class="pagehead"><div class="eyebrow">TRAINING SIMULATOR</div><h1>Игровая галактика</h1><p>Тренируй память, скорость реакции, понимание и построение фраз. Каждая игра даёт опыт и помогает закреплять материал.</p></div><div class="gamegrid"><button class="gamecard" onclick="startGame('match')"><div class="gameicon">🧩</div><h3>Стыковка слов</h3><p>Соедини иностранные слова с правильными переводами.</p></button><button class="gamecard" onclick="startGame('picture')"><div class="gameicon">🪐</div><h3>Сигнал с планеты</h3><p>Угадай слово по эмодзи-подсказке и смыслу.</p></button><button class="gamecard" onclick="startGame('scramble')"><div class="gameicon">🔠</div><h3>Код букв</h3><p>Собери слово из перемешанных букв.</p></button><button class="gamecard" onclick="startGame('rebus')"><div class="gameicon">🔮</div><h3>Космический ребус</h3><p>Разгадай подсказку и найди нужное слово.</p></button><button class="gamecard" onclick="startGame('sentence')"><div class="gameicon">🛰️</div><h3>Конструктор фраз</h3><p>Собери предложение из слов в правильном порядке.</p></button><button class="gamecard" onclick="startGame('listen')"><div class="gameicon">🎧</div><h3>Радиосигнал</h3><p>Прослушай произношение и распознай слово.</p></button></div><div class="notice" style="margin-top:16px">Подсказка: для режима «Радиосигнал» устройству нужен голосовой движок браузера. Доступность голосов зависит от телефона и выбранного языка.</div></section>
+<section class="view" id="view-lesson"><div class="lessonwrap"><button class="btn ghost" onclick="go('home')">← На мостик</button><div class="lessonbox" style="margin-top:13px"><div class="lessonmeta"><span id="lessonMode">УЧЕБНАЯ МИССИЯ</span><span id="lessonStep">1 / 5</span></div><div class="bar"><i id="lessonBar" style="width:0%"></i></div><h2 id="question">Готов к старту?</h2><div class="lessonhint" id="hint">Выбери правильный ответ</div><div id="gameArea"></div><div class="feedback" id="feedback"></div><div class="actions" style="justify-content:center"><button class="btn primary" id="checkBtn" onclick="checkGame()">Проверить</button><button class="btn" onclick="go('games')">Выйти</button></div></div></div></section>
+<section class="view" id="view-leaderboard"><div class="pagehead"><div class="eyebrow">FLEET RANKING</div><h1>Лига исследователей</h1><p>Твой личный прогресс уже здесь. Глобальные соревнования появятся после подключения серверной базы участников.</p></div><div class="card"><div class="eyebrow">ЛОКАЛЬНЫЙ ПРОГРЕСС</div><div class="stats"><div><b id="rankXp">0 XP</b><small>твой опыт</small></div><div><b id="rankLessons">0</b><small>уроков</small></div><div><b id="rankWords">0</b><small>правильных ответов</small></div></div><p class="notice" style="margin-top:18px">Мы не показываем выдуманный рейтинг других людей. Настоящая таблица лидеров требует серверной регистрации и общей базы данных.</p></div></section>
+<section class="view" id="view-profile"><div class="pagehead"><div class="eyebrow">PERSONAL LOGBOOK</div><h1>Твой космический профиль</h1><p>Настрой позывной и посмотри, как далеко ты уже улетел.</p></div><div class="two"><div class="card"><div class="field"><label>ТВОЙ ПОЗЫВНОЙ</label><input id="username" maxlength="24" placeholder="Путешественник"></div><div class="field"><label>ЦЕЛЬ НА ДЕНЬ, МИНУТ</label><select id="dailyGoal"><option value="5">5 минут · Лёгкий старт</option><option value="10">10 минут · Стабильный ритм</option><option value="15">15 минут · Уверенный полёт</option><option value="20">20 минут · Глубокое погружение</option><option value="30">30 минут · Режим исследователя</option></select></div><button class="btn primary" onclick="saveProfile()">Сохранить настройки</button></div><div class="card"><div class="eyebrow">СТАТИСТИКА ПОЛЁТА</div><div class="stats"><div><b id="profileXp">0</b><small>XP</small></div><div><b id="profileLessons">0</b><small>уроков</small></div><div><b id="profileCorrect">0</b><small>верных ответов</small></div></div><div class="notice" style="margin-top:17px">Данные этого прототипа хранятся локально в браузере. Очистка данных браузера может удалить прогресс. Для синхронизации между устройствами нужен сервер.</div><div class="actions"><button class="btn" onclick="exportBackup()">Экспорт прогресса</button><button class="btn" onclick="document.getElementById('importFile').click()">Импорт</button><input id="importFile" type="file" accept="application/json" class="hidden" onchange="importBackup(event)"></div></div></div></section>
+<section class="view" id="view-premium"><div class="pagehead"><div class="eyebrow">POLYVIA PLUS</div><h1>Больше пространства для роста</h1><p>Премиальный доступ — это расширенные тренировки, тематические маршруты и дополнительные инструменты обучения.</p></div><div class="two"><div class="card glow"><div class="eyebrow">PREMIUM MEMBERSHIP</div><h2 style="font:800 34px Manrope;margin:12px 0">399 ₽ <small style="font-size:13px;color:var(--muted)">/ месяц</small></h2><div class="unit"><div class="uniticon">✦</div><div><b>Расширенные игровые тренировки</b><small>Больше практики и повторений</small></div></div><div class="unit"><div class="uniticon">◈</div><div><b>Тематические маршруты</b><small>Путешествия по реальным ситуациям</small></div></div><div class="unit"><div class="uniticon">⌁</div><div><b>Дополнительная аналитика</b><small>Отслеживание личного прогресса</small></div></div><p class="notice">Тариф подготовлен. Реальная оплата и автоматическая выдача Premium подключаются через защищённый платёжный сервис и серверную проверку.</p></div><div class="card"><div class="eyebrow">ТВОЙ СТАТУС</div><h3 id="premiumStatus" style="font:800 22px Manrope">Бесплатный доступ</h3><p id="premiumInfo" style="color:var(--muted);font-size:12px;line-height:1.7">Все доступные функции прототипа открыты.</p><button class="btn" onclick="toast('Для запуска оплаты нужен защищённый платёжный провайдер и сервер')">Подключение защищённой оплаты</button><p class="notice" style="margin-top:15px">Не отправляй номер карты или банковские данные в этот прототип. Для запуска подписки потребуется безопасный платёжный провайдер и серверная проверка платежей.</p></div></div></section>
+<div class="footer">POLYVIA · LANGUAGE GALAXY · Учись. Исследуй. Расширяй свою вселенную.</div></div>
+<div class="toast" id="toast"></div><div class="modal" id="welcome"><div class="modalinner"><button class="close" onclick="closeWelcome()">×</button><div class="eyebrow">WELCOME, EXPLORER</div><h2 style="font:800 27px Manrope;margin:12px 0">Твоя галактика ждёт.</h2><p style="color:var(--muted);font-size:12px;line-height:1.7">Выбери первый язык. Можно начать с английского и в любой момент открыть другой мир.</p><div class="field"><label>ВЫБЕРИ ЯЗЫК</label><select id="welcomeLang"></select></div><button class="btn primary" style="width:100%" onclick="finishWelcome()">Запустить двигатели ✦</button></div></div>
+<script>
+const LANGS=[
+{id:'en',flag:'🇬🇧',name:'Английский',native:'English',voice:'en-US',words:[['hello','привет','👋'],['water','вода','💧'],['book','книга','📘'],['apple','яблоко','🍎'],['house','дом','🏠'],['friend','друг','🧑‍🤝‍🧑'],['sun','солнце','☀️'],['moon','луна','🌙'],['school','школа','🏫'],['love','любовь','❤️'],['bread','хлеб','🍞'],['cat','кот','🐈']]},
+{id:'de',flag:'🇩🇪',name:'Немецкий',native:'Deutsch',voice:'de-DE',words:[['hallo','привет','👋'],['wasser','вода','💧'],['buch','книга','📘'],['apfel','яблоко','🍎'],['haus','дом','🏠'],['freund','друг','🧑‍🤝‍🧑'],['sonne','солнце','☀️'],['mond','луна','🌙'],['schule','школа','🏫'],['liebe','любовь','❤️'],['brot','хлеб','🍞'],['katze','кот','🐈']]},
+{id:'fr',flag:'🇫🇷',name:'Французский',native:'Français',voice:'fr-FR',words:[['bonjour','привет','👋'],['eau','вода','💧'],['livre','книга','📘'],['pomme','яблоко','🍎'],['maison','дом','🏠'],['ami','друг','🧑‍🤝‍🧑'],['soleil','солнце','☀️'],['lune','луна','🌙'],['école','школа','🏫'],['amour','любовь','❤️'],['pain','хлеб','🍞'],['chat','кот','🐈']]},
+{id:'es',flag:'🇪🇸',name:'Испанский',native:'Español',voice:'es-ES',words:[['hola','привет','👋'],['agua','вода','💧'],['libro','книга','📘'],['manzana','яблоко','🍎'],['casa','дом','🏠'],['amigo','друг','🧑‍🤝‍🧑'],['sol','солнце','☀️'],['luna','луна','🌙'],['escuela','школа','🏫'],['amor','любовь','❤️'],['pan','хлеб','🍞'],['gato','кот','🐈']]},
+{id:'it',flag:'🇮🇹',name:'Итальянский',native:'Italiano',voice:'it-IT',words:[['ciao','привет','👋'],['acqua','вода','💧'],['libro','книга','📘'],['mela','яблоко','🍎'],['casa','дом','🏠'],['amico','друг','🧑‍🤝‍🧑'],['sole','солнце','☀️'],['luna','луна','🌙'],['scuola','школа','🏫'],['amore','любовь','❤️'],['pane','хлеб','🍞'],['gatto','кот','🐈']]},
+{id:'zh',flag:'🇨🇳',name:'Китайский',native:'中文',voice:'zh-CN',words:[['你好','привет','👋'],['水','вода','💧'],['书','книга','📘'],['苹果','яблоко','🍎'],['房子','дом','🏠'],['朋友','друг','🧑‍🤝‍🧑'],['太阳','солнце','☀️'],['月亮','луна','🌙'],['学校','школа','🏫'],['爱','любовь','❤️'],['面包','хлеб','🍞'],['猫','кот','🐈']]},
+{id:'ja',flag:'🇯🇵',name:'Японский',native:'日本語',voice:'ja-JP',words:[['こんにちは','привет','👋'],['水','вода','💧'],['本','книга','📘'],['りんご','яблоко','🍎'],['家','дом','🏠'],['友達','друг','🧑‍🤝‍🧑'],['太陽','солнце','☀️'],['月','луна','🌙'],['学校','школа','🏫'],['愛','любовь','❤️'],['パン','хлеб','🍞'],['猫','кот','🐈']]},
+{id:'ko',flag:'🇰🇷',name:'Корейский',native:'한국어',voice:'ko-KR',words:[['안녕하세요','привет','👋'],['물','вода','💧'],['책','книга','📘'],['사과','яблоко','🍎'],['집','дом','🏠'],['친구','друг','🧑‍🤝‍🧑'],['태양','солнце','☀️'],['달','луна','🌙'],['학교','школа','🏫'],['사랑','любовь','❤️'],['빵','хлеб','🍞'],['고양이','кот','🐈']]},
+{id:'ar',flag:'🇸🇦',name:'Арабский',native:'العربية',voice:'ar-SA',words:[['مرحبا','привет','👋'],['ماء','вода','💧'],['كتاب','книга','📘'],['تفاحة','яблоко','🍎'],['بيت','дом','🏠'],['صديق','друг','🧑‍🤝‍🧑'],['شمس','солнце','☀️'],['قمر','луна','🌙'],['مدرسة','школа','🏫'],['حب','любовь','❤️'],['خبز','хлеб','🍞'],['قط','кот','🐈']]},
+{id:'pt',flag:'🇵🇹',name:'Португальский',native:'Português',voice:'pt-PT',words:[['olá','привет','👋'],['água','вода','💧'],['livro','книга','📘'],['maçã','яблоко','🍎'],['casa','дом','🏠'],['amigo','друг','🧑‍🤝‍🧑'],['sol','солнце','☀️'],['lua','луна','🌙'],['escola','школа','🏫'],['amor','любовь','❤️'],['pão','хлеб','🍞'],['gato','кот','🐈']]},
+{id:'hy',flag:'🇦🇲',name:'Армянский',native:'Հայերեն',voice:'hy-AM',words:[['բարև','привет','👋'],['ջուր','вода','💧'],['գիրք','книга','📘'],['խնձոր','яблоко','🍎'],['տուն','дом','🏠'],['ընկեր','друг','🧑‍🤝‍🧑'],['արև','солнце','☀️'],['լուսին','луна','🌙'],['դպրոց','школа','🏫'],['սեր','любовь','❤️'],['հաց','хлеб','🍞'],['կատու','кот','🐈']]}
+];
+const MODULES=[['Первые сигналы','Приветствия и знакомство','👋'],['Орбита предметов','Вещи вокруг нас','🪐'],['Планета вкусов','Еда и напитки','🍎'],['Связь с экипажем','Люди и отношения','🧑‍🚀'],['Домашняя галактика','Дом и повседневность','🏠'],['Время и пространство','Природа и время','🌙']];
+const SENTENCES={en:{q:'Собери фразу: «Я люблю воду»',a:['I','love','water'],t:'I love water'},de:{q:'Собери фразу: «Я люблю воду»',a:['Ich','liebe','Wasser'],t:'Ich liebe Wasser'},fr:{q:'Собери фразу: «Я люблю воду»',a:['J’aime','l’eau'],t:'J’aime l’eau'},es:{q:'Собери фразу: «Я люблю воду»',a:['Yo','amo','el agua'],t:'Yo amo el agua'},it:{q:'Собери фразу: «Я люблю воду»',a:['Io','amo','l’acqua'],t:'Io amo l’acqua'},zh:{q:'Собери фразу: «Я люблю воду»',a:['我','喜欢','水'],t:'我 喜欢 水'},ja:{q:'Собери фразу: «Я люблю воду»',a:['私は','水が','好きです'],t:'私は 水が 好きです'},ko:{q:'Собери фразу: «Я люблю воду»',a:['저는','물을','좋아해요'],t:'저는 물을 좋아해요'},ar:{q:'Собери фразу: «Я люблю воду»',a:['أنا','أحب','الماء'],t:'أنا أحب الماء'},pt:{q:'Собери фразу: «Я люблю воду»',a:['Eu','amo','água'],t:'Eu amo água'},hy:{q:'Собери фразу: «Я люблю воду»',a:['Ես','սիրում','եմ','ջուր'],t:'Ես սիրում եմ ջուր'}};
+const defaults={lang:'en',xp:0,lessons:0,streak:0,correct:0,username:'Путешественник',goal:10,completed:[],seen:[],lastDay:'',badges:[]};let state=load();let game=null,step=0,chosen=null,answered=false,matchLeft=null,matchRight=null,matchDone=[];
+function load(){try{return {...defaults,...JSON.parse(localStorage.getItem('polyvia_state_v3')||'{}')}}catch(e){return {...defaults}}}function save(){localStorage.setItem('polyvia_state_v3',JSON.stringify(state));renderStats()}function lang(){return LANGS.find(x=>x.id===state.lang)||LANGS[0]}function toast(s){let e=document.getElementById('toast');e.textContent=s;e.classList.add('show');clearTimeout(window._toastTimer);window._toastTimer=setTimeout(()=>e.classList.remove('show'),2400)}function go(v){document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));document.getElementById('view-'+v)?.classList.add('active');document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===v));if(v==='learn')renderLearn();if(v==='profile')renderProfile();if(v==='leaderboard')renderRank();window.scrollTo({top:0,behavior:'smooth'})}document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.view)));
+function selectLang(id){state.lang=id;save();renderHome();renderLearn();toast('Открыта галактика: '+lang().name)}function renderLanguages(id){document.getElementById(id).innerHTML=LANGS.map(l=>`<button class="lang ${l.id===state.lang?'selected':''}" onclick="selectLang('${l.id}')"><span>${l.flag}</span><b>${l.name}</b><small>${l.native} · A1–C2 маршрут</small></button>`).join('')}
+function renderUnits(id){let done=state.completed.filter(x=>x.startsWith(state.lang+':')).length;document.getElementById(id).innerHTML=MODULES.map((m,i)=>`<div class="unit"><div class="uniticon">${state.completed.includes(state.lang+':'+i)?'✓':m[2]}</div><div><b>${m[0]}</b><small>${m[1]} · ${state.completed.includes(state.lang+':'+i)?'Завершено':'Игровой модуль'}</small></div><span class="xp">${state.completed.includes(state.lang+':'+i)?'✓':'+'+(50+i*10)+' XP'}</span></div>`).join('')}
+function renderHome(){document.getElementById('homeLang').textContent=lang().flag+' '+lang().name;document.getElementById('homeNative').textContent=lang().native+' · Уровень '+currentLevel();document.getElementById('homeLevel').textContent=currentLevel();document.getElementById('homeName').textContent=state.username;let p=Math.round(state.completed.filter(x=>x.startsWith(state.lang+':')).length/6*100);document.getElementById('homeProgress').textContent=p+'%';document.getElementById('homeBar').style.width=p+'%';renderUnits('homeUnits');renderLanguages('homeLanguages')}
+function currentLevel(){let n=state.completed.length;return n<3?'A1':n<7?'A2':n<13?'B1':n<20?'B2':n<28?'C1':'C2'}function renderLearn(){renderLanguages('allLanguages');document.getElementById('learnTitle').textContent=lang().flag+' '+lang().name;document.getElementById('learnLevel').textContent=currentLevel();let levels=[['A1','Начальный','Первые слова и простые фразы'],['A2','Базовый','Повседневное общение'],['B1','Средний','Самостоятельное общение'],['B2','Выше среднего','Уверенная речь и понимание'],['C1','Продвинутый','Сложные темы и нюансы'],['C2','Мастерство','Точное и свободное владение']];document.getElementById('levels').innerHTML=levels.map((x,i)=>`<div class="levelcard"><b>${x[0]}</b><p>${x[1]}<br>${x[2]}</p><span class="badge">${i===0?'Открыт':i<=Math.floor(state.completed.length/5)?'Доступен':'Следующая ступень'}</span></div>`).join('');renderUnits('learnUnits')}
+function renderStats(){let ids={xpTop:state.xp,streakTop:state.streak,statStreak:state.streak+' 🔥',statLessons:state.lessons,statBadges:state.badges.length,pilotLevel:Math.floor(state.xp/250)+1,rankXp:state.xp+' XP',rankLessons:state.lessons,rankWords:state.correct};Object.entries(ids).forEach(([id,v])=>{let e=document.getElementById(id);if(e)e.textContent=v});let pct=(state.xp%250)/2.5;let b=document.getElementById('pilotBar');if(b)b.style.width=pct+'%'}function renderRank(){renderStats()}function renderProfile(){document.getElementById('username').value=state.username;document.getElementById('dailyGoal').value=String(state.goal);document.getElementById('profileXp').textContent=state.xp;document.getElementById('profileLessons').textContent=state.lessons;document.getElementById('profileCorrect').textContent=state.correct}function saveProfile(){state.username=document.getElementById('username').value.trim()||'Путешественник';state.goal=Number(document.getElementById('dailyGoal').value);save();renderHome();toast('Позывной обновлён')}
+function updateStreak(){let today=new Date().toISOString().slice(0,10);if(state.lastDay!==today){let y=new Date(Date.now()-86400000).toISOString().slice(0,10);state.streak=state.lastDay===y?state.streak+1:1;state.lastDay=today}}
+function startMission(){startGame('lesson')}
+function pickWords(){let arr=[...lang().words];return arr.slice(0,5)}
+function startGame(type){game={type,items:pickWords(),points:0};step=0;chosen=null;answered=false;matchLeft=null;matchRight=null;matchDone=[];go('lesson');renderGame()}
+function setHeader(title,sub){document.getElementById('question').textContent=title;document.getElementById('hint').textContent=sub}
+function renderGame(){let area=document.getElementById('gameArea'),type=game.type;document.getElementById('lessonMode').textContent=({lesson:'УЧЕБНАЯ МИССИЯ',match:'СТЫКОВКА СЛОВ',picture:'СИГНАЛ С ПЛАНЕТЫ',scramble:'КОД БУКВ',rebus:'КОСМИЧЕСКИЙ РЕБУС',sentence:'КОНСТРУКТОР ФРАЗ',listen:'РАДИОСИГНАЛ'})[type];document.getElementById('lessonStep').textContent=(step+1)+' / '+(type==='match'?5:type==='sentence'?1:5);document.getElementById('lessonBar').style.width=(step/(type==='match'?5:type==='sentence'?1:5)*100)+'%';document.getElementById('feedback').textContent='';document.getElementById('feedback').style.color='';document.getElementById('checkBtn').disabled=false;document.getElementById('checkBtn').textContent='Проверить';
+if(type==='match'){renderMatch(area);return}if(type==='sentence'){let s=SENTENCES[state.lang]||SENTENCES.en;let tiles=[...s.a].sort(()=>Math.random()-.5);game.sentenceAnswer=[];game.sentenceTarget=s.a;setHeader(s.q,'Нажимай на слова, чтобы собрать предложение');area.innerHTML='<div class="buildarea" id="buildArea"><span style="color:var(--muted);font-size:11px">Твоя фраза появится здесь…</span></div><div class="wordtiles" id="wordTiles">'+tiles.map((w,i)=>`<button class="tile" data-i="${i}" onclick="addTile(${i},${JSON.stringify(w).replace(/"/g, '&quot;')})">${w}</button>`).join('')+'</div><button class="btn" onclick="resetSentence()">Сбросить</button>';return}
+let item=game.items[step%game.items.length];game.current=item;let distract=game.items.filter(x=>x!==item).sort(()=>Math.random()-.5).slice(0,3);let opts=[item,...distract].sort(()=>Math.random()-.5);if(type==='lesson'){setHeader('Как будет «'+item[1]+'»?', 'Выбери правильный перевод иностранного слова');setOptions(area,opts.map(x=>x[0]),item[0])}if(type==='picture'){setHeader(item[2]+' Что это?', 'Выбери иностранное слово для картинки');setOptions(area,opts.map(x=>x[0]),item[0])}if(type==='rebus'){setHeader(item[2]+' + '+item[1].toUpperCase(), 'Космический ребус: найди соответствующее слово');setOptions(area,opts.map(x=>x[0]),item[0])}if(type==='scramble'){let chars=[...item[0]].sort(()=>Math.random()-.5);game.scramble='';setHeader('Собери слово: «'+item[1]+'»','Нажимай на буквы в правильном порядке');area.innerHTML='<div class="buildarea" id="scrambleBuild"><span style="color:var(--muted);font-size:11px">Собранное слово…</span></div><div class="wordtiles" id="scrambleTiles">'+chars.map((c,i)=>`<button class="tile" onclick="addChar(${i})">${c}</button>`).join('')+'</div>'}if(type==='listen'){setHeader('Что прозвучало?','Нажми «Прослушать», затем выбери услышанное слово');area.innerHTML=`<div style="text-align:center;padding:8px"><button class="btn primary" onclick="speakCurrent()">🔊 Прослушать</button></div>`;setOptions(area,opts.map(x=>x[0]),item[0],true)} }
+function setOptions(area,opts,answer,append=false){game.answer=answer;game.selected=null;let html='<div class="answers">'+opts.map(x=>`<button class="answer" onclick="chooseAnswer(this,${JSON.stringify(x).replace(/</g,'\\u003c')})">${x}</button>`).join('')+'</div>';if(append)area.innerHTML+=html;else area.innerHTML=html}
+function chooseAnswer(el,val){if(answered)return;game.selected=val;document.querySelectorAll('.answer').forEach(x=>x.classList.remove('picked'));el.classList.add('picked')}
+function addTile(i,w){let b=document.querySelectorAll('#wordTiles .tile')[i];if(!b||b.classList.contains('used'))return;b.classList.add('used');game.sentenceAnswer.push(w);renderSentenceBuild()}
+function renderSentenceBuild(){document.getElementById('buildArea').innerHTML=game.sentenceAnswer.map(w=>`<span class="badge">${w}</span>`).join(' ')||'<span style="color:var(--muted);font-size:11px">Твоя фраза появится здесь…</span>'}
+function resetSentence(){game.sentenceAnswer=[];document.querySelectorAll('.tile').forEach(x=>x.classList.remove('used'));renderSentenceBuild()}
+function addChar(i){let buttons=document.querySelectorAll('#scrambleTiles .tile');let b=buttons[i];if(!b||b.classList.contains('used'))return;b.classList.add('used');game.scramble+=b.textContent;document.getElementById('scrambleBuild').textContent=game.scramble}
+function renderMatch(area){let items=game.items.slice(0,5),right=[...items].sort(()=>Math.random()-.5);game.matchPairs=items;game.matchRightOrder=right;area.innerHTML='<div class="matchgrid"><div class="matchcol">'+items.map((x,i)=>`<button class="matchitem" id="ml${i}" onclick="selectMatch('l',${i})">${x[0]}</button>`).join('')+'</div><div class="matchcol">'+right.map((x,i)=>`<button class="matchitem" id="mr${i}" onclick="selectMatch('r',${i})">${x[1]}</button>`).join('')+'</div></div>';setHeader('Стыкуй пары','Выбери слово слева, затем его перевод справа');document.getElementById('checkBtn').textContent='Завершить игру';document.getElementById('checkBtn').disabled=true}
+function selectMatch(side,i){if(matchDone.includes(i)&&side==='l')return;if(side==='l'){matchLeft=i;document.querySelectorAll('[id^=ml]').forEach(x=>x.classList.remove('selected'));document.getElementById('ml'+i).classList.add('selected')}else{matchRight=i;document.querySelectorAll('[id^=mr]').forEach(x=>x.classList.remove('selected'));document.getElementById('mr'+i).classList.add('selected')}if(matchLeft!==null&&matchRight!==null){let left=game.matchPairs[matchLeft],right=game.matchRightOrder[matchRight];if(left[1]===right[1]){document.getElementById('ml'+matchLeft).classList.add('done');document.getElementById('mr'+matchRight).classList.add('done');matchDone.push(matchLeft);game.points+=15;state.correct++;document.getElementById('feedback').textContent='Отлично! Пара состыкована ✦';}else{document.getElementById('feedback').textContent='Не совпало. Попробуй ещё раз.'}matchLeft=null;matchRight=null;document.querySelectorAll('.matchitem').forEach(x=>x.classList.remove('selected'));document.getElementById('checkBtn').disabled=matchDone.length!==5;document.getElementById('lessonStep').textContent=matchDone.length+' / 5';document.getElementById('lessonBar').style.width=(matchDone.length*20)+'%';}}
+function speakCurrent(){if(!('speechSynthesis'in window))return toast('Озвучка не поддерживается браузером');let u=new SpeechSynthesisUtterance(game.current[0]);u.lang=lang().voice;u.rate=.82;speechSynthesis.cancel();speechSynthesis.speak(u)}
+function checkGame(){if(!game)return;let type=game.type;if(type==='match'){if(matchDone.length===5)finishGame();return}if(type==='sentence'){let s=SENTENCES[state.lang]||SENTENCES.en;let ok=game.sentenceAnswer.join(' ')===(s.t)||game.sentenceAnswer.join('')===s.a.join('');finishStep(ok);return}if(type==='scramble'){let ok=game.scramble.toLocaleLowerCase()===game.current[0].toLocaleLowerCase();finishStep(ok);return}if(!game.selected)return toast('Сначала выбери ответ');let ok=game.selected===game.answer;finishStep(ok)}
+function finishStep(ok){if(answered)return;answered=true;let f=document.getElementById('feedback');if(ok){game.points+=20;state.correct++;f.textContent='Верно! +20 XP · Отличная работа';f.style.color='var(--green)'}else{f.textContent='Почти! Правильный ответ: '+(game.answer||game.current?.[0]||'попробуй ещё раз');f.style.color='var(--red)'}if(game.type!=='match'){document.querySelectorAll('.answer').forEach(b=>{if(b.textContent===game.answer)b.classList.add('correct');else if(b.textContent===game.selected)b.classList.add('wrong')})}document.getElementById('checkBtn').textContent=step>=4||game.type==='sentence'?'Завершить':'Дальше →'}
+function nextStep(){step++;answered=false;game.selected=null;if(step>=5){finishGame();return}renderGame()}
+function finishGame(){let bonus=game.type==='match'?game.points:game.points;let total=Math.max(20,bonus)+(game.type==='lesson'?30:15);state.xp+=total;state.lessons++;updateStreak();if(!state.badges.includes('first'))state.badges.push('first');if(game.type==='lesson'){let idx=state.completed.filter(x=>x.startsWith(state.lang+':')).length;let module=Math.min(5,idx);let key=state.lang+':'+module;if(!state.completed.includes(key))state.completed.push(key)}save();renderHome();renderLearn();renderStats();toast('Миссия завершена! +'+total+' XP');go('home');game=null}
+function checkAdvance(){if(game.type==='match'){finishGame();return}if(answered){if(step>=4||game.type==='sentence')finishGame();else nextStep()}else checkGame()}
+document.getElementById('checkBtn').onclick=checkAdvance;
+function closeWelcome(){document.getElementById('welcome').classList.remove('show')}function finishWelcome(){state.lang=document.getElementById('welcomeLang').value;save();closeWelcome();renderHome();renderLearn();localStorage.setItem('polyvia_welcomed_v3','1')}
+function exportBackup(){let blob=new Blob([JSON.stringify({app:'POLYVIA',version:3,state},null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='polyvia-progress.json';a.click();URL.revokeObjectURL(a.href)}function importBackup(e){let f=e.target.files?.[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let o=JSON.parse(r.result);state={...defaults,...(o.state||o)};save();renderHome();renderLearn();renderProfile();toast('Прогресс восстановлен')}catch{toast('Не удалось прочитать файл')}};r.readAsText(f)}
+// expose game handlers used by inline controls
+window.go=go;window.selectLang=selectLang;window.startMission=startMission;window.startGame=startGame;window.chooseAnswer=chooseAnswer;window.addTile=addTile;window.resetSentence=resetSentence;window.addChar=addChar;window.selectMatch=selectMatch;window.speakCurrent=speakCurrent;window.checkGame=checkGame;window.saveProfile=saveProfile;window.closeWelcome=closeWelcome;window.finishWelcome=finishWelcome;window.exportBackup=exportBackup;window.importBackup=importBackup;window.toast=toast;
+LANGS.forEach(l=>{let o=document.createElement('option');o.value=l.id;o.textContent=l.flag+' '+l.name;document.getElementById('welcomeLang').appendChild(o)});document.getElementById('welcomeLang').value=state.lang;renderHome();renderLearn();renderStats();if(!localStorage.getItem('polyvia_welcomed_v3'))document.getElementById('welcome').classList.add('show');
+
+/* =========================================================
+   POLYVIA CORE PATCH v4
+   Надёжная проверка ответов, игровые состояния и сохранение.
+   Этот блок намеренно расположен после базового интерфейса.
+   ========================================================= */
+
+function normalizeAnswer(value) {
+  return String(value ?? '')
+    .normalize('NFC')
+    .trim()
+    .toLocaleLowerCase()
+    .replace(/[’‘`´]/g, "'")
+    .replace(/[“”]/g, '"')
+    .replace(/\s+/g, ' ');
+}
+
+function safeSave() {
+  try {
+    localStorage.setItem('polyvia_state_v3', JSON.stringify(state));
+  } catch (err) {
+    console.warn('POLYVIA: local save unavailable', err);
+    toast('Не удалось сохранить прогресс на устройстве');
+  }
+  renderStats();
+}
+save = safeSave;
+
+function updateStreak() {
+  const localDate = d => {
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}-${m}-${day}`;
+  };
+  const today = localDate(new Date());
+  if (state.lastDay === today) return;
+  const yesterdayDate = new Date();
+  yesterdayDate.setDate(yesterdayDate.getDate() - 1);
+  const yesterday = localDate(yesterdayDate);
+  state.streak = state.lastDay === yesterday ? Number(state.streak || 0) + 1 : 1;
+  state.lastDay = today;
+}
+
+function startGame(type) {
+  const allowed = ['lesson', 'match', 'picture', 'scramble', 'rebus', 'sentence', 'listen'];
+  if (!allowed.includes(type)) {
+    toast('Эта миссия пока недоступна');
+    return;
+  }
+  game = { type, items: pickWords(), points: 0, finished: false };
+  step = 0;
+  chosen = null;
+  answered = false;
+  matchLeft = null;
+  matchRight = null;
+  matchDone = [];
+  go('lesson');
+  renderGame();
+}
+
+function renderMatch(area) {
+  const items = game.items.slice(0, 5);
+  const right = [...items].sort(() => Math.random() - 0.5);
+  game.matchPairs = items;
+  game.matchRightOrder = right;
+  game.matchRightDone = [];
+  area.innerHTML = '<div class="matchgrid"><div class="matchcol">' +
+    items.map((x, i) => `<button class="matchitem" id="ml${i}" onclick="selectMatch('l',${i})">${x[0]}</button>`).join('') +
+    '</div><div class="matchcol">' +
+    right.map((x, i) => `<button class="matchitem" id="mr${i}" onclick="selectMatch('r',${i})">${x[1]}</button>`).join('') +
+    '</div></div>';
+  setHeader('Стыкуй пары', 'Выбери слово слева, затем его перевод справа');
+  document.getElementById('checkBtn').textContent = 'Завершить игру';
+  document.getElementById('checkBtn').disabled = true;
+}
+
+function selectMatch(side, i) {
+  if (!game || game.finished) return;
+  if (side === 'l') {
+    if (matchDone.includes(i)) return;
+    matchLeft = i;
+    document.querySelectorAll('[id^="ml"]').forEach(x => x.classList.remove('selected'));
+    document.getElementById('ml' + i)?.classList.add('selected');
+  } else {
+    if ((game.matchRightDone || []).includes(i)) return;
+    matchRight = i;
+    document.querySelectorAll('[id^="mr"]').forEach(x => x.classList.remove('selected'));
+    document.getElementById('mr' + i)?.classList.add('selected');
+  }
+  if (matchLeft === null || matchRight === null) return;
+
+  const leftWord = game.matchPairs[matchLeft];
+  const rightWord = game.matchRightOrder[matchRight];
+  const feedback = document.getElementById('feedback');
+
+  if (leftWord[0] === rightWord[0]) {
+    document.getElementById('ml' + matchLeft)?.classList.add('done');
+    document.getElementById('mr' + matchRight)?.classList.add('done');
+    matchDone.push(matchLeft);
+    game.matchRightDone.push(matchRight);
+    game.points += 15;
+    state.correct = Number(state.correct || 0) + 1;
+    feedback.textContent = 'Отлично! Пара состыкована ✦';
+    feedback.style.color = 'var(--green)';
+  } else {
+    feedback.textContent = 'Почти! Эта пара не совпадает — попробуй ещё раз.';
+    feedback.style.color = 'var(--red)';
+  }
+
+  matchLeft = null;
+  matchRight = null;
+  document.querySelectorAll('.matchitem').forEach(x => x.classList.remove('selected'));
+  const done = matchDone.length;
+  document.getElementById('checkBtn').disabled = done !== 5;
+  document.getElementById('lessonStep').textContent = done + ' / 5';
+  document.getElementById('lessonBar').style.width = (done * 20) + '%';
+  safeSave();
+}
+
+function checkGame() {
+  if (!game || game.finished || answered) return;
+  const type = game.type;
+  let ok = false;
+
+  if (type === 'match') {
+    if (matchDone.length === 5) finishGame();
+    return;
+  }
+  if (type === 'sentence') {
+    const s = SENTENCES[state.lang] || SENTENCES.en;
+    const built = game.sentenceAnswer || [];
+    const joined = built.join(' ');
+    ok = normalizeAnswer(joined) === normalizeAnswer(s.t) ||
+         normalizeAnswer(built.join('')) === normalizeAnswer(s.a.join(''));
+    game.answer = s.t;
+    finishStep(ok);
+    return;
+  }
+  if (type === 'scramble') {
+    ok = normalizeAnswer(game.scramble) === normalizeAnswer(game.current?.[0]);
+    game.answer = game.current?.[0] || '';
+    finishStep(ok);
+    return;
+  }
+  if (!game.selected) {
+    toast('Сначала выбери ответ');
+    return;
+  }
+  ok = normalizeAnswer(game.selected) === normalizeAnswer(game.answer);
+  finishStep(ok);
+}
+
+function finishStep(ok) {
+  if (!game || game.finished || answered) return;
+  answered = true;
+  const f = document.getElementById('feedback');
+  if (ok) {
+    game.points += 20;
+    state.correct = Number(state.correct || 0) + 1;
+    f.textContent = 'Верно! +20 XP · Отличная работа ✨';
+    f.style.color = 'var(--green)';
+  } else {
+    const correctAnswer = game.answer || game.current?.[0] || 'попробуй ещё раз';
+    f.textContent = 'Пока не получилось. Правильный ответ: ' + correctAnswer;
+    f.style.color = 'var(--red)';
+  }
+
+  document.querySelectorAll('.answer').forEach(b => {
+    if (normalizeAnswer(b.textContent) === normalizeAnswer(game.answer)) b.classList.add('correct');
+    else if (normalizeAnswer(b.textContent) === normalizeAnswer(game.selected)) b.classList.add('wrong');
+  });
+
+  const finalStep = game.type === 'sentence' || step >= 4;
+  document.getElementById('checkBtn').textContent = finalStep ? 'Завершить миссию' : 'Дальше →';
+  safeSave();
+}
+
+function addTile(i, word) {
+  if (!game || game.type !== 'sentence' || answered) return;
+  const button = document.querySelectorAll('#wordTiles .tile')[i];
+  if (!button || button.classList.contains('used')) return;
+  button.classList.add('used');
+  game.sentenceAnswer.push(word);
+  renderSentenceBuild();
+}
+
+function resetSentence() {
+  if (!game || game.type !== 'sentence' || answered) return;
+  game.sentenceAnswer = [];
+  document.querySelectorAll('#wordTiles .tile').forEach(x => x.classList.remove('used'));
+  renderSentenceBuild();
+}
+
+function addChar(i) {
+  if (!game || game.type !== 'scramble' || answered) return;
+  const buttons = document.querySelectorAll('#scrambleTiles .tile');
+  const button = buttons[i];
+  if (!button || button.classList.contains('used')) return;
+  button.classList.add('used');
+  game.scramble = (game.scramble || '') + button.textContent;
+  const target = document.getElementById('scrambleBuild');
+  if (target) target.textContent = game.scramble;
+}
+
+function nextStep() {
+  if (!game || game.finished) return;
+  step++;
+  answered = false;
+  game.selected = null;
+  renderGame();
+}
+
+function checkAdvance() {
+  if (!game || game.finished) return;
+  if (game.type === 'match') {
+    if (matchDone.length === 5) finishGame();
+    return;
+  }
+  if (answered) {
+    if (step >= 4 || game.type === 'sentence') finishGame();
+    else nextStep();
+  } else {
+    checkGame();
+  }
+}
+
+function finishGame() {
+  if (!game || game.finished) return;
+  if (game.type === 'match' && matchDone.length !== 5) return;
+  game.finished = true;
+
+  const earned = Math.max(10, Number(game.points || 0)) + (game.type === 'lesson' ? 30 : 15);
+  state.xp = Number(state.xp || 0) + earned;
+  state.lessons = Number(state.lessons || 0) + 1;
+  updateStreak();
+
+  if (!Array.isArray(state.badges)) state.badges = [];
+  if (!state.badges.includes('first')) state.badges.push('first');
+
+  if (game.type === 'lesson') {
+    const completedForLang = state.completed.filter(x => x.startsWith(state.lang + ':')).length;
+    const moduleIndex = Math.min(5, completedForLang);
+    const key = state.lang + ':' + moduleIndex;
+    if (!state.completed.includes(key)) state.completed.push(key);
+  }
+
+  safeSave();
+  renderHome();
+  renderLearn();
+  renderStats();
+  toast('Миссия завершена! +' + earned + ' XP 🚀');
+  go('home');
+  game = null;
+}
+
+function load() {
+  try {
+    const raw = JSON.parse(localStorage.getItem('polyvia_state_v3') || '{}');
+    const merged = { ...defaults, ...(raw && typeof raw === 'object' ? raw : {}) };
+    merged.xp = Math.max(0, Number(merged.xp) || 0);
+    merged.lessons = Math.max(0, Number(merged.lessons) || 0);
+    merged.correct = Math.max(0, Number(merged.correct) || 0);
+    merged.streak = Math.max(0, Number(merged.streak) || 0);
+    merged.completed = Array.isArray(merged.completed) ? merged.completed : [];
+    merged.badges = Array.isArray(merged.badges) ? merged.badges : [];
+    merged.seen = Array.isArray(merged.seen) ? merged.seen : [];
+    if (!LANGS.some(x => x.id === merged.lang)) merged.lang = 'en';
+    return merged;
+  } catch (err) {
+    console.warn('POLYVIA: saved state could not be read', err);
+    return { ...defaults };
+  }
+}
+
+function importBackup(event) {
+  const file = event.target.files?.[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const parsed = JSON.parse(reader.result);
+      const candidate = parsed?.state || parsed;
+      if (!candidate || typeof candidate !== 'object' || Array.isArray(candidate)) {
+        throw new Error('Invalid backup');
+      }
+      state = { ...defaults, ...candidate };
+      state.completed = Array.isArray(state.completed) ? state.completed : [];
+      state.badges = Array.isArray(state.badges) ? state.badges : [];
+      state.seen = Array.isArray(state.seen) ? state.seen : [];
+      if (!LANGS.some(x => x.id === state.lang)) state.lang = 'en';
+      save();
+      renderHome();
+      renderLearn();
+      renderProfile();
+      toast('Прогресс восстановлен ✦');
+    } catch (err) {
+      toast('Файл резервной копии повреждён или не подходит');
+    } finally {
+      event.target.value = '';
+    }
+  };
+  reader.readAsText(file);
+}
+
+/* Bind all inline controls after the patched functions are defined. */
+window.go = go;
+window.selectLang = selectLang;
+window.startMission = startMission;
+window.startGame = startGame;
+window.chooseAnswer = chooseAnswer;
+window.addTile = addTile;
+window.resetSentence = resetSentence;
+window.addChar = addChar;
+window.selectMatch = selectMatch;
+window.speakCurrent = speakCurrent;
+window.checkGame = checkGame;
+window.saveProfile = saveProfile;
+window.closeWelcome = closeWelcome;
+window.finishWelcome = finishWelcome;
+window.exportBackup = exportBackup;
+window.importBackup = importBackup;
+window.toast = toast;
+
+</script></body></html>
